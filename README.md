@@ -59,8 +59,3 @@ I am currently exploring **Robotics**, **AI at the Edge**, and **Industrial IoT 
 ### 📫 Contact Me
 * **LinkedIn:** [Sneha Wanve](https://www.linkedin.com/in/sneha-wanve-2538001aa)
 * **Email:** [sneha12wanve@gmail.com](mailto:sneha12wanve@gmail.com)
-
----
-<p align="center">
-  <i>"Building the future, one interrupt at a time."</i>
-</p>
