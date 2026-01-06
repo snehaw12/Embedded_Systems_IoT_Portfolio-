@@ -1,0 +1,73 @@
+#include<p18f4520.h>
+#include "LCD.h"
+void UART_init(void);
+void LCD_INIT(void);
+unsigned char receive(void);
+void trans (unsigned char);
+
+void main()
+{	int i,j,x,c;
+	unsigned char Match[15]="Access Granted";
+    unsigned char Mismatch[15]="Access Denied";
+	unsigned char scan[15]="Scan card:";
+	unsigned char a[13]="090015FFEE0D";
+	unsigned char b[13];
+	TRISB=0x00;
+	TRISE=0x00;
+	PORTE=0X00;
+	
+	LCD_INIT();
+	UART_init();
+	LCD_DATA('A');
+	while(1)
+	{
+	LCD_CMD(0x01);
+	LCD_CMD(0x80);				//Lcd display
+	LCD_string(scan);
+	PORTE=0x00;					//buzer off
+		for(i=0;i<12;i++) 		//RFID Accessesd 
+		{   x=receive();      
+			b[i]=x;
+			trans(x);
+			c=0;
+		}
+		for(i=0;i<12;i++)		
+		{
+		if(b[i]==a[i])
+			{
+				c++;
+			}
+		}
+		if(c==12)
+		{LCD_CMD(0x80);
+		 LCD_string(Match);
+		 PORTE=0x00;
+	     delay(6000);
+		}
+		else
+		{
+			LCD_CMD(0x80);
+		 	LCD_string(Mismatch);
+			PORTE=0xFF;
+			delay(6000);				//5 sec delay
+}
+}
+}
+void trans(unsigned char x)
+{	TXREG =x;
+	while(TXSTAbits.TRMT==0);
+	TXSTAbits.TRMT=0;
+}
+void UART_init(void)
+{
+	TRISC=0x80;		//configr RC6 & RC7 pins in o/p & i/p mode
+	TXSTA=0x24;		//TXEN=1,BRGH=1
+	RCSTA=0x90;		//SPEN=1
+	SPBRG=0x81;		//baud ratt = 9600
+}
+unsigned char receive(void)
+{
+	while(PIR1bits.RCIF==0);
+	PIR1bits.RCIF=0;
+	return RCREG;
+}

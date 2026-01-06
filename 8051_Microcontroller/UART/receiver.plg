@@ -1,0 +1,143 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\UART\receiver.uvproj
+Project File Date:  07/02/2018
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling receiver.c...
+receiver.c(12): warning C275: expression with possibly no effect
+receiver.c(15): warning C206: 'rsreceiver': missing function-prototype
+receiver.c(16): error C202: 'r': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling receiver.c...
+receiver.c(12): warning C275: expression with possibly no effect
+receiver.c(15): warning C206: 'rsreceiver': missing function-prototype
+receiver.c(16): error C202: 'r': undefined identifier
+receiver.c(22): error C141: syntax error near '='
+Target not created
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling receiver.c...
+receiver.c(12): warning C275: expression with possibly no effect
+receiver.c(15): warning C206: 'rsreceiver': missing function-prototype
+receiver.c(16): error C202: 'r': undefined identifier
+receiver.c(22): error C141: syntax error near '='
+Target not created
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling receiver.c...
+receiver.c(14): warning C206: 'rsreceiver': missing function-prototype
+receiver.c(15): error C202: 'r': undefined identifier
+receiver.c(21): error C141: syntax error near '='
+Target not created
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling receiver.c...
+receiver.c(14): warning C206: 'rsreceiver': missing function-prototype
+receiver.c(15): error C202: 'r': undefined identifier
+Target not created
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling receiver.c...
+receiver.c(14): warning C206: 'rsreceiver': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?RECEIVER
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _TRANS
+    MODULE:  receiver.obj (RECEIVER)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  RSRECEIVER
+    MODULE:  receiver.obj (RECEIVER)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  RSRECEIVER
+    MODULE:  receiver.obj (RECEIVER)
+    ADDRESS: 080CH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _TRANS
+    MODULE:  receiver.obj (RECEIVER)
+    ADDRESS: 0811H
+Program Size: data=10.0 xdata=0 code=44
+"receiver" - 0 Error(s), 6 Warning(s).
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling receiver.c...
+receiver.c(14): warning C206: 'rsreceiver': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?RECEIVER
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _TRANS
+    MODULE:  receiver.obj (RECEIVER)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  RSRECEIVER
+    MODULE:  receiver.obj (RECEIVER)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  RSRECEIVER
+    MODULE:  receiver.obj (RECEIVER)
+    ADDRESS: 080CH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _TRANS
+    MODULE:  receiver.obj (RECEIVER)
+    ADDRESS: 0811H
+Program Size: data=10.0 xdata=0 code=44
+creating hex file from "receiver"...
+"receiver" - 0 Error(s), 6 Warning(s).
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling receiver.c...
+receiver.c(14): warning C206: 'receiver': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?RECEIVER
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _TRANS
+    MODULE:  receiver.obj (RECEIVER)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  RECEIVER
+    MODULE:  receiver.obj (RECEIVER)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  RECEIVER
+    MODULE:  receiver.obj (RECEIVER)
+    ADDRESS: 080CH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _TRANS
+    MODULE:  receiver.obj (RECEIVER)
+    ADDRESS: 0811H
+Program Size: data=10.0 xdata=0 code=44
+creating hex file from "receiver"...
+"receiver" - 0 Error(s), 6 Warning(s).
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling receiver.c...
+receiver.c(14): warning C206: 'receive': missing function-prototype
+receiver.c(19): error C231: 'receive': redefinition
+receiver.c(25): error C231: 'receive': redefinition
+Target not created
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling receiver.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _TRANS
+    MODULE:  receiver.obj (RECEIVER)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _TRANS
+    MODULE:  receiver.obj (RECEIVER)
+    ADDRESS: 0811H
+Program Size: data=10.0 xdata=0 code=44
+creating hex file from "receiver"...
+"receiver" - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling receiver.c...
+linking...
+Program Size: data=10.0 xdata=0 code=52
+creating hex file from "receiver"...
+"receiver" - 0 Error(s), 0 Warning(s).

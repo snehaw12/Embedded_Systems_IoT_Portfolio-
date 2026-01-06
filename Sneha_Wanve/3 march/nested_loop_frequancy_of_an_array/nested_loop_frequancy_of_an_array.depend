@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1709469222 source:e:\1teknomindz_embedded_iot\sneha_wanve\3 march\nested_loop_frequancy_of_an_array\main.c
+	<stdio.h>
+	<stdlib.h>
+

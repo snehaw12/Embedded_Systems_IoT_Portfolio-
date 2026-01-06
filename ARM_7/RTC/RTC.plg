@@ -1,0 +1,147 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+F:\1Teknomindz_embedded_iot\ARM_7\RTC\RTC.uvproj
+Project File Date:  07/25/2011
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(18): error:  #167: argument of type "char *" is incompatible with parameter of type "unsigned char"
+RTC.c(21): error:  #167: argument of type "char *" is incompatible with parameter of type "unsigned char"
+RTC.c(33): error:  #268: declaration may not appear after executable statement in block
+RTC.c(33): error:  #67: expected a "}"
+RTC.c(36): error:  #20: identifier "X" is undefined
+RTC.c(46): error:  #20: identifier "X" is undefined
+RTC.c(64): error:  #147-D: declaration is incompatible with "void LCD_STRING(unsigned char)" (declared at line 6)
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(18): error:  #167: argument of type "char *" is incompatible with parameter of type "unsigned char"
+RTC.c(21): error:  #167: argument of type "char *" is incompatible with parameter of type "unsigned char"
+RTC.c(33): error:  #268: declaration may not appear after executable statement in block
+RTC.c(33): error:  #67: expected a "}"
+RTC.c(36): error:  #20: identifier "X" is undefined
+RTC.c(46): error:  #20: identifier "X" is undefined
+RTC.c(64): error:  #147-D: declaration is incompatible with "void LCD_STRING(unsigned char)" (declared at line 6)
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(18): error:  #140: too many arguments in function call
+RTC.c(21): error:  #140: too many arguments in function call
+RTC.c(33): error:  #268: declaration may not appear after executable statement in block
+RTC.c(33): error:  #67: expected a "}"
+RTC.c(36): error:  #20: identifier "X" is undefined
+RTC.c(46): error:  #20: identifier "X" is undefined
+RTC.c(64): error:  #147-D: declaration is incompatible with "void LCD_STRING(void)" (declared at line 6)
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(17): error:  #140: too many arguments in function call
+RTC.c(20): error:  #140: too many arguments in function call
+RTC.c(32): error:  #268: declaration may not appear after executable statement in block
+RTC.c(32): error:  #67: expected a "}"
+RTC.c(35): error:  #20: identifier "X" is undefined
+RTC.c(45): error:  #20: identifier "X" is undefined
+RTC.c(63): error:  #147-D: declaration is incompatible with "void LCD_STRING(void)" (declared at line 6)
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(6): warning:  #1295-D: Deprecated declaration LCD_STRING - give arg types
+RTC.c(32): error:  #268: declaration may not appear after executable statement in block
+RTC.c(32): error:  #67: expected a "}"
+RTC.c(35): error:  #20: identifier "X" is undefined
+RTC.c(45): error:  #20: identifier "X" is undefined
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(16): warning:  #223-D: function "LCD_STRING" declared implicitly
+RTC.c(31): error:  #268: declaration may not appear after executable statement in block
+RTC.c(31): error:  #67: expected a "}"
+RTC.c(34): error:  #20: identifier "X" is undefined
+RTC.c(44): error:  #20: identifier "X" is undefined
+RTC.c(62): error:  #159: declaration is incompatible with previous "LCD_STRING" (declared at line 16)
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(16): warning:  #223-D: function "LCD_STRING" declared implicitly
+RTC.c(31): error:  #268: declaration may not appear after executable statement in block
+RTC.c(31): error:  #67: expected a "}"
+RTC.c(34): error:  #109: expression must have (pointer-to-) function type
+RTC.c(44): error:  #109: expression must have (pointer-to-) function type
+RTC.c(62): error:  #159: declaration is incompatible with previous "LCD_STRING" (declared at line 16)
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(16): warning:  #223-D: function "LCD_STRING" declared implicitly
+RTC.c(31): error:  #268: declaration may not appear after executable statement in block
+RTC.c(31): error:  #67: expected a "}"
+RTC.c(34): error:  #109: expression must have (pointer-to-) function type
+RTC.c(44): error:  #109: expression must have (pointer-to-) function type
+RTC.c(62): error:  #159: declaration is incompatible with previous "LCD_STRING" (declared at line 16)
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(17): error:  #140: too many arguments in function call
+RTC.c(20): error:  #140: too many arguments in function call
+RTC.c(32): error:  #268: declaration may not appear after executable statement in block
+RTC.c(32): error:  #67: expected a "}"
+RTC.c(35): error:  #109: expression must have (pointer-to-) function type
+RTC.c(45): error:  #109: expression must have (pointer-to-) function type
+RTC.c(63): error:  #147-D: declaration is incompatible with "void LCD_STRING(void)" (declared at line 6)
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(32): error:  #268: declaration may not appear after executable statement in block
+RTC.c(32): error:  #67: expected a "}"
+RTC.c(35): error:  #109: expression must have (pointer-to-) function type
+RTC.c(45): error:  #109: expression must have (pointer-to-) function type
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(36): error:  #109: expression must have (pointer-to-) function type
+RTC.c(46): error:  #109: expression must have (pointer-to-) function type
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+RTC.c(46): error:  #109: expression must have (pointer-to-) function type
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+linking...
+RTC.axf: Error: L6218E: Undefined symbol DELAY (referred from rtc.o).
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+linking...
+Program Size: Code=1516 RO-data=16 RW-data=0 ZI-data=1256  
+"RTC.axf" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+linking...
+Program Size: Code=1516 RO-data=16 RW-data=0 ZI-data=1256  
+"RTC.axf" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling RTC.c...
+linking...
+Program Size: Code=1516 RO-data=16 RW-data=0 ZI-data=1256  
+FromELF: creating hex file...
+"RTC.axf" - 0 Error(s), 0 Warning(s).

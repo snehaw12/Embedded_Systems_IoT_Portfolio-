@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1530503300 source:e:\1teknomindz_embedded_iot\embedded_c_programs\sneha_wanve\sneha_wanve\palindrome\main.c
+	<stdio.h>
+	<stdlib.h>
+

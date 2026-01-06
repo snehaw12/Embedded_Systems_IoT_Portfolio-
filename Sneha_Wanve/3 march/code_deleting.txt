@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <stdlib.h>
+// deleting an element from array
+int main()
+{   int a[7],i,j,k,n=5,c;
+
+    printf("enter elements in an array \n ");
+    for (i=0;i<n;i++){
+            scanf("%d",&a[i]);
+    }
+
+    for (i=0;i<n;i++){
+        for(j=(i+1);j<n;j++){
+                if(a[i]==a[j]){
+                  for(k=j;k<(n-1);k++){
+                    a[k]==a[k+1];
+                  }
+                  n--;
+                  j--;
+                }
+        }
+    }
+        printf("enter elements in an array \n ");
+    for(c=0;c<n+1;c++){
+         printf("%d\n",a[c]);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,ind,ele,base,n=5,k,z,count=0,a[5];
+    printf("Enter the array Elements\n");
+    //Reading Elements
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    //Count Frequency
+    for(ind=0;ind<n;ind++)
+    {
+        for(ele=ind+1;ele<n;ele++)
+        {
+            //base=a[ind];
+            if(a[ind]==a[ele])
+            {
+                for(k=ele;k<n-1;k++)
+                {
+                    a[k]=a[k+1];
+                }
+                n--;
+                ele--;
+            }
+        }
+    }
+    for(z=0;z<n;z++)
+    {
+        printf("%d",a[z]);
+    }
+    return 0;
+}
+

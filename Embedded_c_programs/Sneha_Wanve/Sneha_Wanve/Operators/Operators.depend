@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1530503741 source:d:\student\sneha_wanve\operators\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1530504279 source:d:\student\sneha_wanve\operators\scanning.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,61 @@
+C51 COMPILER V9.50a   TIMER                                                                07/02/2018 10:12:56 PAGE 1   
+
+
+C51 COMPILER V9.50a, COMPILATION OF MODULE TIMER
+OBJECT MODULE PLACED IN timer.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE timer.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit led = P1^0;
+   3          sbit led_1= P1^1;
+   4          void delay (void);
+   5          void main()
+   6          {
+   7   1        int i=0,j=0;
+   8   1        led = 0;
+   9   1        led_1=0;
+  10   1        while(1)
+  11   1        {
+  12   2          if(i==1){
+  13   3            led=~led;
+  14   3            i=0;
+  15   3          }
+  16   2          if(j==4){
+  17   3            led_1=~led_1;
+  18   3            j=0;
+  19   3          }
+  20   2      
+  21   2          delay();
+  22   2          i++;
+  23   2          j++;
+  24   2        }
+  25   1      }
+  26          void delay (void)
+  27          {int i;
+  28   1        TMOD = 0x01;        //timer 0 configured in 16 bit mode (56320) 
+  29   1        for(i=0;i<100;i++)
+  30   1        {
+  31   2        TH0 = 0xdc;           // th & tL loaded with dc00 hex value
+  32   2        TL0 = 0x00;           //start timer 
+  33   2        TR0 = 1;
+  34   2        while(TF0 == 0);      //wait until timer overflow
+  35   2        TF0 = 0;                //reset flag (TFO)
+  36   2        TR0 = 0;
+  37   2        }   //stop timer
+  38   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     95    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1708778458 source:e:\1teknomindz_embedded_iot\sneha_wanve\24_feb\binary_to_decimal_in_arrays\main.c
+	<stdio.h>
+	<stdlib.h>
+

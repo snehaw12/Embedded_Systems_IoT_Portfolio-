@@ -1,0 +1,66 @@
+C51 COMPILER V9.50a   UART                                                                 07/02/2018 15:06:50 PAGE 1   
+
+
+C51 COMPILER V9.50a, COMPILATION OF MODULE UART
+OBJECT MODULE PLACED IN UART.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE UART.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          //serial UART
+   3          // transmission
+   4          void delay(int);
+   5          void trans (unsigned char);
+   6          void trans_string (char *);
+   7          void main()
+   8          {
+   9   1        TMOD = 0x20;    //timer 1 in 8 bit auto reload mode
+  10   1        TH1 = 0xFD;   //band rate 9600
+  11   1        SCON = 0x40;    //7 bit +start +Stop mode
+  12   1        TR1 =1;
+  13   1        while(1)
+  14   1        {
+  15   2          trans_string("SNEHA");
+  16   2          trans(13);
+  17   2          trans_string("WANVE");
+  18   2          trans(13);
+  19   2          trans(13);
+  20   2          delay(1000);
+  21   2        }
+  22   1      }
+  23          void delay(int t)
+  24          { int i,j;
+  25   1        for (i=0;i<t;i++)
+  26   1        for (j=0;j<100;j++);
+  27   1      }
+  28          void trans (unsigned char x)
+  29          {
+  30   1        SBUF = x;
+  31   1        while(TI==0);
+  32   1        TI = 0;
+  33   1      }
+  34          void trans_string (char *p)
+  35          {
+  36   1        while(*p!='\0')
+  37   1        {
+  38   2          trans(*p);
+  39   2          p++;
+  40   2        }
+  41   1      }
+  42              
+  43              
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    118    ----
+   CONSTANT SIZE    =     12    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

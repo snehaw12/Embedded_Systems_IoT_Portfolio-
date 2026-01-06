@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"string.obj" 
+TO "string" 
+RAMSIZE(256) 

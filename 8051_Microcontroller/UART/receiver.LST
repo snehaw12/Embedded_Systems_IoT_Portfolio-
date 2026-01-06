@@ -1,0 +1,56 @@
+C51 COMPILER V9.50a   RECEIVER                                                             07/02/2018 15:25:00 PAGE 1   
+
+
+C51 COMPILER V9.50a, COMPILATION OF MODULE RECEIVER
+OBJECT MODULE PLACED IN receiver.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE receiver.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          //serial UART
+   3          // receiver
+   4          void delay(int);
+   5          void trans (unsigned char);
+   6          unsigned char receive(void);
+   7          void main()
+   8          { unsigned char r;
+   9   1        TMOD = 0x20;    //timer 1 in 8 bit auto reload mode
+  10   1        TH1 = 0xFD;   //band rate 9600
+  11   1        SCON = 0x50;    //7 bit +start +Stop mode
+  12   1        TR1 = 1;
+  13   1        while(1)
+  14   1        {
+  15   2          r=receive();
+  16   2          trans(r);
+  17   2        }
+  18   1      }
+  19          void trans (unsigned char x)
+  20          {
+  21   1        SBUF = x;
+  22   1        while(TI==0);
+  23   1        TI = 0;
+  24   1      }
+  25          unsigned char receive(void)
+  26          {
+  27   1        unsigned char x;
+  28   1        while(RI==0);
+  29   1        RI = 0;
+  30   1        x = SBUF;
+  31   1        return x;
+  32   1      }
+  33          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     37    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

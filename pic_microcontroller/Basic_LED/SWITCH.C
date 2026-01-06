@@ -1,0 +1,33 @@
+#include<P18f4520.h>
+void main()
+{
+	TRISB=0X00;
+	PORTB=0X00;
+	while(1)
+{
+	if(PORTCbits.RC0==0)
+{
+	PORTB=0xF0;
+}
+	if(PORTCbits.RC1==0)
+{
+	PORTBbits.RB1=1;
+}
+   if(PORTCbits.RC2==0)
+{
+	PORTBbits.RB2=1;
+}
+	if(PORTCbits.RC3==0)
+{
+	PORTBbits.RB3=1;
+}
+	if(PORTCbits.RC4==0)
+{
+	PORTBbits.RB4=1;
+}
+	else{}
+	PORTBbits.RB1=0;
+}
+}
+
+	

@@ -1,0 +1,172 @@
+C51 COMPILER V9.50a   KEYPAD_LCD                                                           07/02/2018 10:58:20 PAGE 1   
+
+
+C51 COMPILER V9.50a, COMPILATION OF MODULE KEYPAD_LCD
+OBJECT MODULE PLACED IN keypad_lcd.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE keypad_lcd.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          #define lcd P3
+   3          sbit r0 = P2^0;
+   4          sbit r1 = P2^1;
+   5          sbit r2 = P2^2;
+   6          sbit r3 = P2^3;
+   7          sbit c0 = P2^4;
+   8          sbit c1 = P2^5;
+   9          sbit c2 = P2^6;
+  10          sbit c3 = P2^7;
+  11          sbit rs = P1^0;
+  12          sbit rw = P1^1;
+  13          sbit e  = P1^2;
+  14          
+  15          void lcd_cmd(unsigned char);
+  16          void lcd_data(unsigned char);
+  17          void delay (int);
+  18          void main()
+  19          {
+  20   1        lcd_cmd(0x38);    //initializing two lines in 8 bit mode   
+  21   1        lcd_cmd(0x01);   // clear
+  22   1        lcd_cmd(0x0c);  //display on;display off;
+  23   1        lcd_cmd(0x80);  //line 1 ; position 1
+  24   1      
+  25   1      
+  26   1        while(1)
+  27   1        { 
+  28   2          r0 = 0;
+  29   2          r1=r2=r3=1;
+  30   2      
+  31   2          if (c0 == 0)
+  32   2          {
+  33   3            lcd_data('0');
+  34   3          } 
+  35   2          
+  36   2            r3=0;
+  37   2          r0=r1=r2=1;
+  38   2          if (c1 == 0)
+  39   2          {
+  40   3            lcd_data ('1');
+  41   3          }
+  42   2      
+  43   2      }
+  44   1      }
+  45              void lcd_cmd(unsigned char x)
+  46          {
+  47   1        lcd = x;  //pass data on dataline
+  48   1        rs  = 0;  //configure rs in command mode
+  49   1        rw = 0;   // configure rw in write mode
+  50   1        e = 1;    // enable high
+  51   1        delay(4);    
+  52   1        e = 0;    //enable high
+  53   1      }
+  54          void lcd_data(unsigned char x)
+  55          { 
+C51 COMPILER V9.50a   KEYPAD_LCD                                                           07/02/2018 10:58:20 PAGE 2   
+
+  56   1        lcd = x;
+  57   1        rs = 1;
+  58   1        rw = 0;
+  59   1        e = 1;
+  60   1        delay(4);
+  61   1        e = 0;
+  62   1      }
+  63          void delay(int t)
+  64          {
+  65   1        int i,j;
+  66   1        for(i=0;i<t;i++)
+  67   1        for(j=0;j<100;j++);
+  68   1      
+  69   1      }
+  70              
+  71          
+  72          
+  73          
+  74          
+  75          
+  76          
+  77          
+  78          
+  79          
+  80          
+  81          
+  82          
+  83          
+  84          
+  85          
+  86          
+  87          
+  88          
+  89          
+  90          
+  91          
+  92          /*
+  93          // program on lcd
+  94          #include <reg51.h>
+  95          #define lcd P2
+  96          sbit rs = P1^0;
+  97          sbit rw = P1^1;
+  98          sbit e  = P1^2;
+  99          void lcd_cmd(unsigned char);
+ 100          void lcd_data(unsigned char);
+ 101          void delay (int);
+ 102          void main()
+ 103          {
+ 104            lcd_cmd(0x38);    //initializing two lines in 8 bit mode   
+ 105            lcd_cmd(0x01);   // clear
+ 106            lcd_cmd(0x0c);  //display on;display off;
+ 107            lcd_cmd(0x80);  //line 1 ; position 1
+ 108            // 
+ 109            lcd_data('h');
+ 110            lcd_data('e');
+ 111            lcd_data('l');
+ 112            lcd_data('l');
+ 113            lcd_data('0');
+ 114            lcd_cmd(0xc0); 
+ 115            lcd_data('w');
+ 116            lcd_data('o');
+ 117            lcd_data('r');
+C51 COMPILER V9.50a   KEYPAD_LCD                                                           07/02/2018 10:58:20 PAGE 3   
+
+ 118            lcd_data('l');
+ 119            lcd_data('d');
+ 120            while (1);
+ 121          }
+ 122          void lcd_cmd(unsigned char x)
+ 123          {
+ 124            lcd = x;  //pass data on dataline
+ 125            rs  = 0;  //configure rs in command mode
+ 126            rw = 0;   // configure rw in write mode
+ 127            e = 1;    // enable high
+ 128            delay(4);    
+ 129            e = 0;    //enable high
+ 130          }
+ 131          void lcd_data(unsigned char x)
+ 132          { lcd = x;
+ 133            rs = 1;
+ 134            rw = 0;
+ 135            e = 1;
+ 136            delay(4);
+ 137            e = 0;
+ 138          }
+ 139          void delay(int t)
+ 140          {
+ 141            int i,j;
+ 142            for(i=0;i<t;i++)
+ 143            for(j=0;j<100;j++);
+ 144          }
+ 145          */
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    120    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

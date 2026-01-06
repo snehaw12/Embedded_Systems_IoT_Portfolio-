@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,ind,ele,base,n=5,k,z,count=0,a[5];
+    printf("Enter the array Elements\n");
+    //Reading Elements
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    //Count Frequency
+    for(ind=0;ind<n;ind++)
+    {
+        for(ele=ind+1;ele<n;ele++)
+        {
+            //base=a[ind];
+            if(a[ind]==a[ele])
+            {
+                for(k=ele;k<n-1;k++)
+                {
+                    a[k]=a[k+1];
+                }
+                n--;
+                ele--;
+            }
+        }
+    }
+    for(z=0;z<n;z++)
+    {
+        printf("%d",a[z]);
+    }
+    return 0;
+}
