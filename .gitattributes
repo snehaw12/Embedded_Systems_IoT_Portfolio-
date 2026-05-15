@@ -1,0 +1,16 @@
+# Proteus design files (not code)
+*.pdsprj linguist-vendored
+*.pdsprj_backup linguist-vendored
+*.pdsprj_backup_* linguist-vendored
+*.DSN linguist-vendored
+*.SCH linguist-vendored
+
+# Simulation files (not code)
+*.cvs linguist-vendored
+*.eda linguist-vendored
+*.pvs linguist-vendored
+
+# Mark these as documentation, not code
+*.hex linguist-vendored
+*.map linguist-vendored
+*.lst linguist-vendored
