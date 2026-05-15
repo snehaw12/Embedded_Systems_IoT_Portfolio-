@@ -5,6 +5,14 @@
 *.DSN linguist-vendored
 *.SCH linguist-vendored
 
+# Keil uVision GUI and config files (currently detected as Tcl)
+*.uvgui.* linguist-vendored
+*.uvopt linguist-vendored
+*.uvoptx linguist-vendored
+*.uvproj linguist-vendored
+*.uvprojx linguist-vendored
+*.TM linguist-vendored
+
 # Simulation files (not code)
 *.cvs linguist-vendored
 *.eda linguist-vendored
