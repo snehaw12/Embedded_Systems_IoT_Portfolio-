@@ -1,7 +1,7 @@
 # 👩‍💻 Embedded Systems & IoT Portfolio
 ### **Sneha Damodhar Wanave** | Real-Time Systems Developer | Embedded Specialist
 
-A comprehensive portfolio showcasing **520+ hours** of hands-on embedded systems and IoT development with production-grade firmware, RTOS implementations, and hardware interfacing across multiple microcontroller architectures.
+A comprehensive portfolio developed through **intensive 1-year embedded systems training program**, showcasing hands-on expertise in production-grade firmware, RTOS implementations, and hardware interfacing across multiple microcontroller architectures.
 
 **Language Composition:** Assembly (43.6%) | C (27.0%) | HTML (17.7%) | C++ (10.5%)
 
@@ -123,14 +123,15 @@ Multi-module integration projects:
 
 ---
 
-## 📊 Portfolio Metrics
-| Metric | Value |
-|--------|-------|
-| **Total Development Hours** | 520+ |
-| **Active Development Period** | Dec 2023 – Present |
+## 📊 Portfolio Overview
+| Aspect | Details |
+|--------|---------|
+| **Training Program** | 1-year intensive embedded systems development |
+| **Training Type** | Structured lab-based hands-on training |
+| **Active Development Period** | December 2023 – Present |
 | **Microcontroller Families** | 6+ architectures |
 | **Sensor/Module Integrations** | 45+ |
-| **RTOS Experience** | FreeRTOS on Cortex-M3 |
+| **RTOS Experience** | FreeRTOS on ARM Cortex-M3 |
 | **Language Distribution** | Assembly (43.6%) \| C (27.0%) \| HTML (17.7%) \| C++ (10.5%) |
 
 ---
