@@ -128,7 +128,7 @@ Multi-module integration projects:
 |--------|---------|
 | **Training Program** | 1-year intensive embedded systems development |
 | **Training Type** | Structured lab-based hands-on training |
-| **Active Development Period** | December 2023 – Present |
+| **Active Development Period** | December 2023 – january 2024 |
 | **Microcontroller Families** | 6+ architectures |
 | **Sensor/Module Integrations** | 45+ |
 | **RTOS Experience** | FreeRTOS on ARM Cortex-M3 |
