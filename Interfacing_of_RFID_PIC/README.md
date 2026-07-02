@@ -1,8 +1,10 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # RFID Interfacing with PIC Microcontroller
 
 ## 📋 Project Overview
 
-This project implements an **RFID-based Access Control System** using a **PIC18F4520 microcontroller**. The system reads RFID card data via UART communication and compares it with a pre-stored ID. Based on the match, it displays "Access Granted" or "Access Denied" on a 16x2 LCD display and activates a buzzer for denied access.
+This project implements an **RFID-based Access Control System** using a **PIC18F4520 microcontroller**. The system reads RFID card data via UART communication and compares it with a pre-stored ID. [...]
 
 ### Key Features
 - ✅ RFID card reading and identification
@@ -119,7 +121,7 @@ void UART_init(void)
     TRISC = 0x80;     // RC7=input(RX), RC6=output(TX)
     TXSTA = 0x24;     // TXEN=1(enable TX), BRGH=1(high baud rate)
     RCSTA = 0x90;     // SPEN=1(enable serial port), CREN=1(enable RX)
-    SPBRG = 0x81;     // Baud rate = 9600 @ 20MHz clock
+    SPBRG = 0x81;    // Baud rate = 9600 @ 20MHz clock
 }
 ```
 
@@ -245,28 +247,28 @@ void delay(int t)
 │   Character by character                 │
 └──────────────┬──────────────────────────┘
                │
-        ┌──────┴──────┐
+         ┌──────┴──────┐
+         │             │
+         ▼             ▼
+     Match      Mismatch
+     (c==12)    (c<12)
+         │             │
+         ▼             ▼
+   ┌─────────┐   ┌──────────┐
+   │ Grant   │   │  Deny    │
+   │ Access  │   │ Access   │
+   │ Buzzer  │   │ Buzzer   │
+   │ OFF     │   │ ON       │
+   └────┬────┘   └────┬─────┘
         │             │
-        ▼             ▼
-    Match      Mismatch
-    (c==12)    (c<12)
-        │             │
-        ▼             ▼
-  ┌─────────┐   ┌──────────┐
-  │ Grant   │   │  Deny    │
-  │ Access  │   │ Access   │
-  │ Buzzer  │   │ Buzzer   │
-  │ OFF     │   │ ON       │
-  └────┬────┘   └────┬─────┘
-       │             │
-       └──────┬──────┘
-              ▼
-        ┌──────────────────┐
-        │  6 Second Delay  │
-        └────────┬─────────┘
-                 │
-                 ▼
-           Return to Scan
+        └──────┬──────┘
+               ▼
+         ┌──────────────────┐
+         │  6 Second Delay  │
+         └────────┬─────────┘
+                  │
+                  ▼
+            Return to Scan
 ```
 
 ---
@@ -324,7 +326,7 @@ void delay(int t)
 ## 🐛 Troubleshooting
 
 | Issue | Cause | Solution |
-|-------|-------|----------|
+|-------|-------|---------|
 | LCD not displaying | Port configuration error | Check TRISC and TRISD settings |
 | RFID not reading | UART baud rate mismatch | Verify SPBRG = 0x81 for 9600 baud |
 | Buzzer always ON | PORTE initialization | Set PORTE = 0x00 initially |
